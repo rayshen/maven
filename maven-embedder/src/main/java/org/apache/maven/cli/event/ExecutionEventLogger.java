@@ -138,6 +138,7 @@ public class ExecutionEventLogger
             logStats( event.getSession() );
 
             infoLine( '-' );
+
         }
     }
 
@@ -156,6 +157,8 @@ public class ExecutionEventLogger
             StringBuilder buffer = new StringBuilder( 128 );
 
             buffer.append( project.getName() );
+            buffer.append( ' ' );
+            buffer.append( project.getVersion() );
             buffer.append( ' ' );
 
             if ( buffer.length() <= MAX_PROJECT_NAME_LENGTH )
